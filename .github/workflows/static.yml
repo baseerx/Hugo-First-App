@@ -41,3 +41,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          ithub-token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages  # You can customize the branch here
+          folder: public   # Specify the deployment directory
+
